@@ -10,6 +10,7 @@ resource "aws_db_subnet_group" "rds_subnet_group" {
 resource "aws_db_instance" "rds_db" {
   publicly_accessible             = var.publicly_accessible
   allocated_storage               = var.allocated_storage
+  max_allocated_storage           = var.max_allocated_storage
 #  storage_type                    = var.storage_type
 #  iops                            = var.iops
   engine                          = var.engine

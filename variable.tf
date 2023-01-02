@@ -10,12 +10,12 @@ variable "allocated_storage" {
   default     = null
 }
 
-#variable "max_allocated_storage" {
-#  type        = number
-#  description = "Argument higher than the allocated_storage to enable Storage Autoscaling, size in GB. 0 to disable Storage Autoscaling"
-#  default     = 0
-#}
-#
+variable "max_allocated_storage" {
+  type        = number
+  description = "Argument higher than the allocated_storage to enable Storage Autoscaling, size in GB. 0 to disable Storage Autoscaling"
+  default     = 0
+}
+
 #variable "storage_type" {
 #  type        = string
 #  description = "The instance storage type"
@@ -67,6 +67,11 @@ variable "apply_immediately" {
 variable "subnet_ids" {
   description = "The VPC Subnet IDs to launch in"
   type        = list(string)
+}
+
+variable "skip_final_snapshot" {
+  type        = bool
+  default     = true
 }
 
 #variable "kms_key_arn" {
