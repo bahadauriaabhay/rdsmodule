@@ -1,6 +1,6 @@
 ```hcl
 module "rds_db_post" {
-  source   = "git::https://github.com/tothenew/terraform-aws-rds.git?ref=v0.0.1"
+  source   = "https://github.com/bahadauriaabhay/rdsmodule.git"
 
   create_aurora = false
 
