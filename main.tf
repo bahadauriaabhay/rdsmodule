@@ -1,3 +1,8 @@
+resource "random_string" "rds_db_password" {
+  length  = 34
+  special = false
+}
+
 resource "aws_db_subnet_group" "rds_subnet_group" {
   name       = var.db_subnet_group_id
   subnet_ids = var.subnet_ids
