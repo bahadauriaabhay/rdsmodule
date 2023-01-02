@@ -68,7 +68,10 @@ variable "subnet_ids" {
   description = "The VPC Subnet IDs to launch in"
   type        = list(string)
 }
-
+variable "db_subnet_group_id" {
+  description = "RDS Subnet Group Name"
+  type        = string
+}
 variable "skip_final_snapshot" {
   type        = bool
   default     = true
@@ -126,6 +129,11 @@ variable environment {
   type        = string
   default     = "dev"
   description = "description"
+}
+variable "project_name_prefix" {
+  description = "A string value to describe prefix of all the resources"
+  type        = string
+  default = "dev-new-project"
 }
 
 variable "common_tags" {
