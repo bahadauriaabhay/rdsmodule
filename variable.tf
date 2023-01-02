@@ -121,3 +121,28 @@ variable "security_groups" {
     default = null
   
 }
+
+variable environment {
+  type        = string
+  default     = "dev"
+  description = "description"
+}
+
+variable "common_tags" {
+  type        = map(string)
+  description = "A map to add common tags to all the resources"
+}
+
+variable "port" {
+  type = number
+  default = 3306
+  description = "Port number for this DB (usually 3306 for MySQL and 5432 for Postgres)"
+}
+
+#variable "vpc_cidr" {
+#  type = list(string)
+#}
+
+variable "vpc_id" {
+  type = string
+}
